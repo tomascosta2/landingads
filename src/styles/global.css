@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@config "./tailwind.config.js";
+
+.bg-primary {
+  @apply bg-[#F6FBFF]
+}
+
+*:not(i) {
+  font-family: 'Inter Variable', sans-serif;
+}
+
+/* Scroll */
+* {
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track,
+body {
+  background: #F6FBFF;
+  overflow-x: clip;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #4f46e5 !important; 
+  border-radius: 20px;
+  border: 5px solid #F6FBFF;
+}
+
+.tc-container {
+  @apply max-w-[1140px] mx-auto relative px-4;
+}
+
+.luta-btn {
+  @apply flex w-fit rounded-md bg-orange-500 px-14 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all
+}
+.luta-subtitle {
+  @apply text-[32px] font-bold leading-[120%] tracking-tight text-gray-900
+}
+.luta-overtitle {
+  @apply rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10;
+}
+
+/* Animations */
+.appear-from-bottom,
+.appear-from-right,
+.appear-from-left {
+  transform: translateY(100px);
+  opacity: 0;
+
+  animation: appearFromBottom ease-in both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 40%;
+}
+@keyframes appearFromBottom {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #4f46e5EE;
+  white-space: nowrap;
+  /* margin: 0 auto; */
+  animation: 
+    typing 3.5s steps(64, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4f46e5EE; }
+}

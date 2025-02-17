@@ -1,0 +1,113 @@
+---
+import Check from "./icons/Check.astro";
+import Xmark from "./icons/Xmark.astro";
+---
+
+<section class="py-[80px] bg-gray-900 relative">
+	<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+	<div class="mx-auto max-w-[800px] relative">
+		<h2 class="text-white font-semibold text-[28px] max-w-[450px] leading-[120%] text-center mx-auto">Comparativa entre el 99% de sitios web y los nuestros</h2>
+		<div class="grid grid-cols-2 gap-4 mt-8">
+			<div class="bg-[#0e1523] border border-white/20 rounded-sm px-8 py-12">
+				<h5 class="text-white font-semibold text-[20px] mb-6">Otras páginas web</h5>
+				<ul>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Creadas con maquetador visual
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Malos resultados en pruebas de Google
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Vulnerables a hackeos por malas prácticas
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Usan plantillas genéricas que no transmiten nada
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Hacen lo mínimo posible para terminar rápido
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/90 gap-4 py-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						Cargan lento por no estar bien optimizadas
+					</li>
+					<li class="flex items-center text-white/90 gap-4 pt-4">
+						<div class="bg-red-500 min-w-[34px] size-[34px] flex items-center justify-center rounded-full">
+							<Xmark />
+						</div>
+						usd350
+					</li>
+				</ul>
+			</div>
+			<div class="bg-[#0e1523] border border-white/20 rounded-sm px-8 py-12">
+				<h5 class="text-white font-semibold text-[20px] mb-6">Nuestras páginas web</h5>
+				<ul>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Creadas con codigo
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Resultados de mínimo 90 en pruebas de Google
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Sitios 100% seguros usando siempre las mejores prácticas
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Creamos una página a medida para vos y tu marca
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Trabajamos hasta que el resultado te encante
+					</li>
+					<li class="border-b border-b-white/20 flex items-center text-white/80 gap-4 py-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						Están optimizadas para cargar lo más rápido posible
+					</li>
+					<li class="flex items-center text-white/80 gap-4 pt-4">
+						<div class="bg-green-500 min-w-[30px] size-[30px] flex items-center justify-center rounded-full">
+							<Check />
+						</div>
+						usd450
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a
+			class="luta-btn gap-1 items-center mt-8 mx-auto"
+			href="/utils/create-landing-page"
+		>
+			Consulta Gratuita »
+		</a>
+	</div>
+</section>
