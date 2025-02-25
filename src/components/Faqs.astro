@@ -23,19 +23,19 @@ const preguntas = [
 ];
 ---
 
-<section id="faqs" class="relative py-[80px] px-4">
+<section id="faqs" class="relative py-[80px] px-4 bg-gray-900">
   <div class="container mx-auto">
-    <h2 class="text-2xl font-bold mb-8 text-center">Preguntas Frecuentes</h2>
+    <h2 class="text-2xl text-white font-bold mb-8 text-center">Preguntas Frecuentes</h2>
     <div class="max-w-2xl mx-auto">
       {preguntas.map((item, index) => (
-        <details class="mb-4 bg-primary p-5 border-b last:border-b-0 border-[#111]/50 mx-auto">
-          <summary class="text-lg text-[#111] flex justify-between items-center cursor-pointer">
+        <details class="mb-4 bg-gray-900 text-white p-5 border-b last:border-b-0 border-white/50 mx-auto">
+          <summary class="text-lg flex justify-between items-center cursor-pointer">
             {item.pregunta}
-            <svg class="md:block hidden" width="20" height="20" fill="#111" viewBox="0 0 448 512">
+            <svg class="md:block hidden" width="20" height="20" fill="#FFF" viewBox="0 0 448 512">
               <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
             </svg>
           </summary>
-          <p class="text-[#111]/80 mt-2 text-start">{item.respuesta}</p>
+          <p class="text-white/80 mt-2 text-start">{item.respuesta}</p>
         </details>
       ))}
     </div>
