@@ -18,6 +18,8 @@ import '@fontsource-variable/inter';
 		<script src="/src/layouts/analytics.js"></script>
 		<!-- Pixel -->
 		<script src="/src/layouts/pixel.js"></script>
+
+		<script src="/src/layouts/fbqClick.js"></script>
 		<noscript>
 			<img 
 				height="1" width="1" 
@@ -27,6 +29,28 @@ import '@fontsource-variable/inter';
 		</noscript>
 		<!-- Hotjar -->
 		<script src="/src/layouts/hotjar.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const buttons = document.querySelectorAll('.--fbq');
+
+				buttons.forEach(btn => {
+					btn.addEventListener('click', (event) => {
+						console.log('click')
+						event.preventDefault(); // Evita la redirección inmediata
+
+						(window as any).fbq?.('trackCustom', 'WhatsAppClick'); // Usa 'as any' para evitar el error de TypeScript
+
+						const url = btn.getAttribute('href'); // Obtiene la URL del botón
+						if (url) {
+						setTimeout(() => {
+							window.location.href = url; // Redirige después de un breve tiempo
+						}, 300); // Da tiempo a que Facebook Pixel lo registre
+						}
+					});
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<slot />
